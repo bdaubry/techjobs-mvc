@@ -37,12 +37,7 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
-    <table th:each="job : ${jobs}" class="job-listing">
-        <tr th:each="column : ${job}">
-            <th th:text="${#strings.capitalizeWords(column.key)}"></th>
-            <td th:text="${column.value}"></td>
-        </tr>
-    </table>
+    <div th:replace="fragments :: job-list"></div>
 
 </div>
 
